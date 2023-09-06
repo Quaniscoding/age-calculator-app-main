@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- Font google -->
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
+    <!--tailwindcss-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="bg-[hsl(0,0%,86%)]">
+    <div
+      class="xl:h-[750px] flex flex-col items-center justify-center relative top-[80px] xl:top-0"
+    >
+      <div
+        class="bg-[hsl(0,0%,100%)] flex flex-col items-center justify-center rounded-[15px] w-[300px] xl:ml-[90px] lg:w-[850px]"
+      >
+        <!-- input day,month,year -->
+        <div class="flex items-start justify-start xl:mr-[250px]">
+          <div class="flex flex-row items-start">
+            <div class="flex flex-col xl:p-4 w-[65px] m-5 xl:w-[170px] xl:ml-4">
+              <label for="dayInput" class="text-[hsl(0,1%,44%)] font-[700]"
+                >DAY</label
+              >
+              <input
+                type="number"
+                name=""
+                id="dayInput"
+                class="border xl:pl-3 p-1 text-[20px] xl:text-[32px] text-[hsl(0,0%,8%)] font-[800] border-[hsl(0,0%,86%)] rounded placeholder:text-[hsl(0,1%,44%)] placeholder:text-[18px] xl:placeholder:text-[32px] placeholder:text-start placeholder:pt-5 xl:p-3"
+                placeholder="DD"
+                min="1"
+                max="31"
+              />
+              <p id="requiredDay" class="text-[hsl(0,100%,67%)] hidden text-sm">
+                This field is required
+              </p>
+            </div>
+            <div class="flex flex-col xl:p-4 w-[65px] m-5 xl:w-[170px] xl:ml-4">
+              <label for="monthInput" class="text-[hsl(0,1%,44%)] font-[700]"
+                >MONTH</label
+              >
+              <input
+                type="number"
+                name=""
+                id="monthInput"
+                class="border xl:pl-3 p-1 text-[20px] xl:text-[32px] text-[hsl(0,0%,8%)] font-[800] border-[hsl(0,0%,86%)] rounded placeholder:text-[hsl(0,1%,44%)] placeholder:text-[18px] xl:placeholder:text-[32px] placeholder:text-start placeholder:pt-5 xl:p-3"
+                placeholder="MM"
+                min="1"
+                max="12"
+              />
+              <p
+                id="requiredMonth"
+                class="text-[hsl(0,100%,67%)] hidden text-sm"
+              >
+                This field is required
+              </p>
+            </div>
+            <div class="flex flex-col xl:p-4 w-[65px] m-5 xl:w-[170px] xl:ml-4">
+              <label for="yearInput" class="text-[hsl(0,1%,44%)] font-[700]"
+                >YEAR</label
+              >
+              <input
+                type="number"
+                name=""
+                id="yearInput"
+                class="border xl:pl-3 p-1 text-[20px] xl:text-[32px] text-[hsl(0,0%,8%)] font-[800] border-[hsl(0,0%,86%)] rounded placeholder:text-[hsl(0,1%,44%)] placeholder:text-[18px] xl:placeholder:text-[32px] placeholder:text-start placeholder:pt-5 xl:p-3"
+                placeholder="YYYY"
+                min="1"
+              />
+              <p
+                id="requiredYear"
+                class="text-[hsl(0,100%,67%)] hidden text-sm"
+              >
+                This field is required
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- button -->
+        <div
+          class="h-[2px] w-[270px] xl:w-[750px] bg-[hsl(0,1%,44%)] m-6 xl:mr-28 mr-[128px] relative left-[50px] top-[20px] xl:top-0"
+        ></div>
+        <div class="rounded-full" id="countAge">
+          <img
+            src="./assets//images/icon-arrow.svg"
+            alt="icon"
+            class="p-3 rounded-full bg-[hsl(259,100%,65%)] hover:bg-[hsl(0,0%,8%)] cursor-pointer relative xl:left-[332%] xl:top-[-75px] top-[-40px] w-[70px] xl:w-[100px]"
+          />
+        </div>
+        <!-- result -->
+        <div class="relative xl:top-[-70px] xl:right-[26%]">
+          <div class="flex p-6 pb-2 pt-0">
+            <p
+              class="text-[60px] xl:text-[75px] text-[hsl(259,100%,65%)] font-[800]"
+              id="years"
+            >
+              - -
+            </p>
+            <p class="text-[60px] xl:text-[75px] font-bold">years</p>
+          </div>
+          <div class="flex p-6 pt-0 pb-2">
+            <p
+              class="text-[60px] xl:text-[75px] text-[hsl(259,100%,65%)] font-[800]"
+              id="months"
+            >
+              - -
+            </p>
+            <p class="text-[60px] xl:text-[75px] font-bold">months</p>
+          </div>
+          <div class="flex p-6 pt-0 pb-0">
+            <p
+              class="text-[60px] xl:text-[75px] text-[hsl(259,100%,65%)] font-[800]"
+              id="days"
+            >
+              - -
+            </p>
+            <p class="text-[60px] xl:text-[75px] font-bold">days</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
